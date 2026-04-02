@@ -71,13 +71,13 @@ void loop(){
   botaoPedestre = digitalRead(botaoSemaforo1);
   botaoPedestre2 = digitalRead(botaoSemaforo2);
   
-  if (botaoPedestre && botaoAtivo == 0) {
+  if (botaoPedestre && !botaoAtivo) {
     blockBotao = true;  
     blockBotao2 = false;
     botaoAtivo = 1;      
   }
 
-  if (botaoPedestre2 && botaoAtivo == 0) {
+  if (botaoPedestre2 && !botaoAtivo) {
     blockBotao2 = true;  
     blockBotao = false;
     botaoAtivo = 2;    
